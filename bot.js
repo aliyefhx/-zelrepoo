@@ -127,20 +127,6 @@ async function whatsAsena () {
             }
         }
     }, 50000);
-    async function asynchronous_ch() {
-        execx('sed -n 3p ' + clh.pth_v, async (err, stdout, stderr) => {
-            if (clh.exc_pl + '\n' !== stdout) {
-                await heroku.get(baseURI + '/formation').then(async (formation) => {
-                    forID = formation[0].id;
-                    await heroku.patch(baseURI + '/formation/' + forID, {
-                        body: {
-                            quantity: 0
-                        }
-                    });
-                })
-            }
-        })
-    }
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
             var timezone_bio = await WhatsAsenaStack.timezone(WhatsAsenaCN.user.jid)
