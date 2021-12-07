@@ -141,7 +141,6 @@ async function whatsAsena () {
             }
         })
     }
-    asynchronous_ch()
     setInterval(async () => { 
         if (config.AUTOBIO == 'true') {
             var timezone_bio = await WhatsAsenaStack.timezone(WhatsAsenaCN.user.jid)
