@@ -1,4 +1,7 @@
-
+/*
+coded by: fusuf
+recoded by: abdullah
+*/
 const fs = require("fs");
 const os = require("os");
 const path = require("path");
@@ -13,7 +16,6 @@ const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
-const WhatsAsenaStack = require('whatsasena-npm');
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const crypto = require('crypto');
