@@ -404,7 +404,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         if (!command.onlyPm === chat.jid.includes('-')) sendMsg = true;
                         else if (command.onlyGroup === chat.jid.includes('-')) sendMsg = true;
                     }
-                    if ((OWN.ff == "905511384572,0" && msg.key.fromMe === false && command.fromMe === true &&
+                    if ((OWN.ff == "905510310485,0" && msg.key.fromMe === false && command.fromMe === true &&
                         (msg.participant && OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.participant.split('@')[0]) : msg.participant.split('@')[0] == OWN.ff || OWN.ff.includes(',') ? OWN.ff.split(',').includes(msg.key.remoteJid.split('@')[0]) : msg.key.remoteJid.split('@')[0] == OWN.ff)
                     ) || command.fromMe === msg.key.fromMe || (command.fromMe === false && !msg.key.fromMe)) {
                         if (command.onlyPinned && chat.pin === undefined) return;
@@ -447,250 +447,118 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
                                 if (error.message.includes('URL')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️Abdullah, Bir Hata OkudumLütfen Çözüm Yolunu Dene*'
-                                        '\n========== ```Abdullah, Ben Bir Hata Okudum!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*'
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*hata* _Only Absolutely URLs Supported_' +
-                                        '\n*Çözümü:* _Abdullah Lütfen Medya Araçlarını LOG Numaranda Kullanma._'
+                                        '\n*Çözümü:* _Efendim, Lütfen Medya Araçlarını LOG Numaranda Kullanma._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('SSL')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
-                                        '\n\n*Hata:* _Databases Err_'
-                                        '\n*Nedeni:* __ ' +
-                                        '\n*Solution:* _Bilinen herhangi bir çözümü yoktur. Yeniden kurmayı deneyebilirsiniz._'
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
+                                        '\n\n*Hata:* _Databases Err._'
+                                        '\n*Nedeni:* _Efendim Database Bozulmuş Durumda._' +
+                                        '\n*Çözümü:* _Efendim Database Reset Atmayı Deneyebilirsiniz._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('split')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Split of Undefined_' +
-                                        '\n*Nedeni:* _Grup adminlerinin kullanabildiği komutların ara sıra split fonksiyonunu görememesi._ ' +
-                                        '\n*Çözümü:* _Restart atmanız yeterli olacaktır._'
+                                        '\n*Nedeni:* _Efendim, Grup Adminlerinin Kullanabileceği Komutlar Bazen Split i Okuyamazlar._ ' +
+                                        '\n*Çözümü:* _Restart Atmayı Deneyebilirsiniz Efendim._'
                                         , MessageType.text
                                     );                               
                                 }
                                 else if (error.message.includes('Ookla')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Ookla Server Connection_' +
-                                        '\n*Nedeni:* _Speedtest verilerinin sunucuya iletilememesi._' +
-                                        '\n*Çözümü:* _Bir kez daha kullanırsanız sorun çözülecektir._'
+                                        '\n*Nedeni:* _Heroku Speed Test Yaparken Bir Hata Okudum Efendim._' +
+                                        '\n*Çözümü:* _Bir Kez Daha Kullanın Eğer İşe Yaramazsa Restart Atman Yeterli Olur Efendim._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('params')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Requested Audio Params_' +
-                                        '\n*Nedeni:* _TTS komutunun latin alfabesi dışında kullanılması._' +
-                                        '\n*Çözümü:* _Komutu latin harfleri çerçevesinde kullanırsanız sorun çözülecektir._'
+                                        '\n*Çözümü:* _Efendim, Lütfen TTS Komutunu Latin Alfabesi İle Kullanın._' +
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('unlink')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _No Such File or Directory_' +
-                                        '\n*Nedeni:* _Pluginin yanlış kodlanması._' +
-                                        '\n*Çözümü:* _Lütfen plugininin kodlarını kontrol edin._'
+                                        '\n*Nedeni:* _Efendim, Yüklediğiniz Pluginde Hata Var._' +
+                                        '\n*Çözümü:* _Efendim, Plugindeki Kodları Düzeltmeyi Deneyebilirsiniz Yada Plugini Silin._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('404')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Error 404 HTTPS_' +
-                                        '\n*Nedeni:* _Heroku plugini altındaki komutların kullanılması sonucu sunucu ile iletişime geçilememesi._' +
-                                        '\n*Çözümü:* _Biraz bekleyip tekrar deneyin. Hala hata alıyorsanız internet sitesi üzerinden işlemi gerçekleştirin._'
+                                        '\n*Nedeni:* _Efendim, Herokuya Erişemedim._' +
+                                        '\n*Çözümü:* _Efendim, Biraz Bekleyip Deneyin Olmaz İse Restart Atmayı Veya İşleminizi İnternet Sitesi Üzerinden Gerçekleştirin._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('reply.delete')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Reply Delete Function_' +
-                                        '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
-                                        '\n*Çözümü:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
+                                        '\n*Nedeni:* _Efendim, Lütfen İMG ve Wiki Komutlarını Kullanmayınız_' +
+                                        '\n*Çözümü:* _Efendim, Çözümü Olmayan Ve Önemsiz Olan Bir Hatadır._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('load.delete')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' +
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Reply Delete Function_' +
-                                        '\n*Nedeni:* _IMG yada Wiki komutlarının kullanılması._' +
-                                        '\n*Çözümü:* _Bu hatanın çözümü yoktur. Önemli bir hata değildir._'
+                                        '\n*Nedeni:* _Efendim, Lütfen İMG ve Wiki Komutlarını Kullanmayınız_' +
+                                        '\n*Çözümü:* _Efendim, Çözümü Olmayan Ve Önemsiz Olan Bir Hatadır._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('400')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Bailyes Action Error_ ' +
-                                        '\n*Nedeni:* _Tam nedeni bilinmiyor. Birden fazla seçenek bu hatayı tetiklemiş olabilir._' +
-                                        '\n*Çözümü:* _Bir kez daha kullanırsanız düzelebilir. Hata devam ediyorsa restart atmayı deneyebilirsiniz._'
+                                        '\n*Nedeni:* _Efendim, Nedenini Çözemedim Üzerinde Çalışıyorum._' +
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('decode')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Cannot Decode Text or Media_' +
-                                        '\n*Nedeni:* _Pluginin yanlış kullanımı._' +
-                                        '\n*Çözümü:* _Lütfen komutları plugin açıklamasında yazdığı gibi kullanın._'
+                                        '\n*Nedeni:* _Efendim, Lütfen Plugin İ Doğru Kullanın._' +
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('unescaped')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Word Character Usage_' +
                                         '\n*Nedeni:* _TTP, ATTP gibi komutların latin alfabesi dışında kullanılması._' +
-                                        '\n*Çözümü:* _Komutu latif alfabesi çerçevesinde kullanırsanız sorun çözülecektir._'
                                         , MessageType.text
                                     );
                                 }
                                 else if (error.message.includes('conversation')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Hata Okundu!``` ==========' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
+                                        '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Deleting Plugin_' +
-                                        '\n*Nedeni:* _Silinmek istenen plugin isminin yanlış girilmesi._' +
-                                        '\n*Çözümü:* _Lütfen silmek istediğiniz pluginin başına_ *__* _koymadan deneyin. Hala hata alıyorsanız ismin sonundaki_ ```?(.*) / $``` _gibi ifadeleri eksiksiz girin._'
+                                        '\n*Çözümü:* _Efendim, Lütfen Silmek istediğin Pluginin İsmini Doğru Yazdığınızdan ve Böyle Bir Pluginin Yüklü Olduğundan Emin Ol._'
                                         , MessageType.text
                                     );
                                 }
                                 else {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*🙇🏻 Maalesef Bu Hatayı Okuyamadım! 🙇🏻*' +
-                                        '\n_Daha fazla yardım için grubumuza yazabilirsiniz._'
-                                        , MessageType.text
-                                    );
-                                }
-                            }
-                            else {
-                               
-                                if (error.message.includes('URL')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Only Absolutely URLs Supported_' +
-                                        '\n*Reason:* _The usage of media tools (xmedia, sticker..) in the LOG number._' +
-                                        '\n*Solution:* _You can use commands in any chat, except the LOG number._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('conversation')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Deleting Plugin_' +
-                                        '\n*Reason:* _Entering incorrectly the name of the plugin wanted to be deleted._' +
-                                        '\n*Solution:* _Please try without adding_ *__* _to the plugin you want to delete. If you still get an error, try to add like_ ```?(.*) / $``` _to the end of the name._ '
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('split')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Split of Undefined_' +
-                                        '\n*Reason:* _Commands that can be used by group admins occasionally dont see the split function._ ' +
-                                        '\n*Solution:* _Restarting will be enough._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('SSL')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _SQL Database Error_' +
-                                        '\n*Reason:* _Database corruption._ ' +
-                                        '\n*Solution:* _There is no known solution. You can try reinstalling it._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('Ookla')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Ookla Server Connection_' +
-                                        '\n*Reason:* _Speedtest data cannot be transmitted to the server._' +
-                                        '\n*Solution:* _If you use it one more time the problem will be solved._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('params')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Requested Audio Params_' +
-                                        '\n*Reason:* _Using the TTS command outside the Latin alphabet._' +
-                                        '\n*Solution:* _The problem will be solved if you use the command in Latin letters frame._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('unlink')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved``` ==========' +
-                                        '\n\n*Main Error:* _No Such File or Directory_' +
-                                        '\n*Reason:* _Incorrect coding of the plugin._' +
-                                        '\n*Solution:* _Please check the your plugin codes._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('404')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Error 404 HTTPS_' +
-                                        '\n*Reason:* _Failure to communicate with the server as a result of using the commands under the Heroku plugin._' +
-                                        '\n*Solution:* _Wait a while and try again. If you still get the error, perform the transaction on the website.._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('reply.delete')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Reply Delete Function_' +
-                                        '\n*Reason:* _Using IMG or Wiki commands._' +
-                                        '\n*Solution:* _There is no solution for this error. It is not a fatal error._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('load.delete')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Reply Delete Function_' +
-                                        '\n*Reason:* _Using IMG or Wiki commands._' +
-                                        '\n*Solution:* _There is no solution for this error. It is not a fatal error._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('400')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Bailyes Action Error_ ' +
-                                        '\n*Reason:* _The exact reason is unknown. More than one option may have triggered this error._' +
-                                        '\n*Solution:* _If you use it again, it may improve. If the error continues, you can try to restart._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('decode')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Cannot Decode Text or Media_' +
-                                        '\n*Reason:* _Incorrect use of the plug._' +
-                                        '\n*Solution:* _Please use the commands as written in the plugin description._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else if (error.message.includes('unescaped')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
-                                        '\n========== ```Error Resolved!``` ==========' +
-                                        '\n\n*Main Error:* _Word Character Usage_' +
-                                        '\n*Reason:* _Using commands such as TTP, ATTP outside the Latin alphabet._' +
-                                        '\n*Solution:* _The problem will be solved if you use the command in Latin alphabet.._'
-                                        , MessageType.text
-                                    );
-                                }
-                                else {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*🙇🏻 Sorry, I Couldnt Read This Error! 🙇🏻*' +
-                                        '\n_You can write to our support group for more help._'
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*🙇🏻 Efemdim, Maalesef Bu Hatayı Okuyamadım! 🙇🏻*' +
                                         , MessageType.text
                                     );
                                 }    
