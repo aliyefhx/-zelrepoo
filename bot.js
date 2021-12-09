@@ -457,7 +457,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                 else if (error.message.includes('SSL')) {
                                     return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
                                         '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
-                                        '\n\n*Hata:* _Databases Err._'
+                                        '\n\n*Hata:* _Databases Err._' +
                                         '\n*Nedeni:* _Efendim Database Bozulmuş Durumda._' +
                                         '\n*Çözümü:* _Efendim Database Reset Atmayı Deneyebilirsiniz._'
                                         , MessageType.text
@@ -485,7 +485,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
                                         '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Requested Audio Params_' +
-                                        '\n*Çözümü:* _Efendim, Lütfen TTS Komutunu Latin Alfabesi İle Kullanın._' +
+                                        '\n*Çözümü:* _Efendim, Lütfen TTS Komutunu Latin Alfabesi İle Kullanın._'
                                         , MessageType.text
                                     );
                                 }
@@ -529,7 +529,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
                                         '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Bailyes Action Error_ ' +
-                                        '\n*Nedeni:* _Efendim, Nedenini Çözemedim Üzerinde Çalışıyorum._' +
+                                        '\n*Nedeni:* _Efendim, Nedenini Çözemedim Üzerinde Çalışıyorum._' 
                                         , MessageType.text
                                     );
                                 }
@@ -537,7 +537,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
                                         '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Cannot Decode Text or Media_' +
-                                        '\n*Nedeni:* _Efendim, Lütfen Plugin İ Doğru Kullanın._' +
+                                        '\n*Nedeni:* _Efendim, Lütfen Plugin İ Doğru Kullanın._' 
                                         , MessageType.text
                                     );
                                 }
@@ -545,7 +545,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' + 
                                         '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*Ana Hata:* _Word Character Usage_' +
-                                        '\n*Nedeni:* _TTP, ATTP gibi komutların latin alfabesi dışında kullanılması._' +
+                                        '\n*Nedeni:* _TTP, ATTP gibi komutların latin alfabesi dışında kullanılması._' 
                                         , MessageType.text
                                     );
                                 }
@@ -558,7 +558,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*🙇🏻 Efemdim, Maalesef Bu Hatayı Okuyamadım! 🙇🏻*' +
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*🙇🏻 Efemdim, Maalesef Bu Hatayı Okuyamadım! 🙇🏻*' 
                                         , MessageType.text
                                     );
                                 }    
