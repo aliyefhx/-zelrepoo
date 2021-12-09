@@ -447,7 +447,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
                                 if (error.message.includes('URL')) {
-                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*'
+                                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ Efendim, Bir Hata Okudum ⚕️*' +
                                         '\n========== ```Efendim, Ben Bir Hata Okudum!``` ==========' +
                                         '\n\n*hata* _Only Absolutely URLs Supported_' +
                                         '\n*Çözümü:* _Efendim, Lütfen Medya Araçlarını LOG Numaranda Kullanma._'
