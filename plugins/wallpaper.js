@@ -17,7 +17,7 @@ const Lang = Language.getString('wallpaper');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'wallpaper$', fromMe: true, desc: Lang.WP}, (async (message, match) => {
+    Asena.addCommand({pattern: 'aliylive$', fromMe: true, desc: Lang.WP}, (async (message, match) => {
 
         var r_text = new Array ();
 
@@ -1288,7 +1288,7 @@ else if (Config.WORKTYPE == 'public') {
           });
         };
         await download(r_text[i], '/root/WhatsAsenaDuplicated/wwp.png', async() => {                          
-          await message.client.sendMessage(message.jid, fs.readFileSync('/root/WhatsAsenaDuplicated/wwp.png'), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena'})
+          await message.client.sendMessage(message.jid, fs.readFileSync('/root/WhatsAsenaDuplicated/wwp.png'), MessageType.image, { mimetype: Mimetype.png, caption: '-> *Selam @aliyefh_sos botun çalışıyor/* \n -> `Tanrı Türkü korusun` / \n *Made by @aliyefh_sos* '})
         })
     }));   
 }
