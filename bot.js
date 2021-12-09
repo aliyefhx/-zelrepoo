@@ -1,7 +1,4 @@
-/*
-coded by: fusuf
-recoded by: abdullah
-*/
+
 const fs = require("fs");
 const os = require("os");
 const path = require("path");
