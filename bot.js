@@ -229,7 +229,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             chalk.blueBright.italic('⬇️ Installing External Plugins...')
         );
         if (os.userInfo().homedir !== clh.pay) return;
-        asynchronous_ch()
         // ==================== External Plugins ====================
         var plugins = await plugindb.PluginDB.findAll();
         plugins.map(async (plugin) => {
