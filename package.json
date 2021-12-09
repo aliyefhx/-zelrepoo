@@ -33,7 +33,7 @@
   "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
   "dependencies": {
     "heroku": "^7.59.2",
-    "whatsasena-npm": "^1.3.0",
+    "whatsdark-npm": "^0.0.2",
     "yarm": "^0.4.0"
   }
 }
