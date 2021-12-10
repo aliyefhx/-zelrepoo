@@ -107,7 +107,7 @@ async function eva_functionality_f() {
 eva_functionality_f()
 
 Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
-    if (message.message.startsWith('Eva') && eva_functionality !== 'true') {        
+    if (message.message.startsWith('Aliy') && eva_functionality !== 'true') {        
         var unique_ident = ''
         if (conf.WORKTYPE == 'private') {
             unique_ident = message.client.user.jid.split('@')[0]
@@ -131,7 +131,7 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
         if (conf.WORKTYPE == 'private') {
             finm = message.message.replace('Eva', '').replace(' ', '')
         } else if (conf.WORKTYPE == 'public') {
-            finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+            finm = message.message.replace('Aliy', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
         }
         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
         if (ainame !== 'Asena') return;
@@ -153,7 +153,7 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
                 trmsg = ceviri.text
             }
         }
-        var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
+        var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Aliy', 'TheAliy', 'WhatsAsena', unique_ident)
         var fins = ''                           
         if (conf.LANG !== 'EN') {
             ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
@@ -178,7 +178,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
                         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                         if (ainame !== 'Asena') return;
-                        var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+                        var finm = message.message.replace('Aliy', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                         var ldet = lngDetector.detect(finm)
                         var trmsg = ''
                         if (ldet[0][0] !== undefined) {
@@ -197,7 +197,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                                 trmsg = ceviri.text
                             }
                         }
-                        var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
+                        var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Aliy', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
                         var fins = ''                           
                         if (conf.LANG !== 'EN') {
                             ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
@@ -217,7 +217,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                     let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                     var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                     if (ainame !== 'Asena') return;
-                    var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+                    var finm = message.message.replace('Aliy', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                     var ldet = lngDetector.detect(finm)
                     var trmsg = ''
                     if (ldet[0][0] !== undefined) {
